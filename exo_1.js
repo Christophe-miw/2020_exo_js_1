@@ -16,17 +16,22 @@ let taches = [{
 ];
 
 
-let Noms = []
-let priorite = []
-taches.forEach((element) => Noms.push(element.nom))
-taches.forEach((element) => {
-    if (element.priorite == 1)
-        priorite.push(element.priorite)
+let Noms = taches.map(x => x.nom)
 
-
-})
+let priorite = taches.filter(x => x.priorite == 1)
 let resultat = 0
-taches.forEach((element) => resultat += element.duree)
+const reducer = (taches) => taches.duree
+resultat = taches.reduce((x, y) => x + y.duree, 0)
+    /* taches.forEach((element) => Noms.push(element.nom))
+    taches.forEach((element) => {
+        if (element.priorite == 1)
+            priorite.push(element.priorite)
+
+
+    })
+    let resultat = 0
+	taches.forEach((element) => resultat += element.duree) */
+
 console.log(resultat)
 console.log(Noms)
 console.log(priorite)
