@@ -18,4 +18,9 @@ let taches = [
 
 console.log(taches.map(nvoObj => nvoObj .nom));
 console.log(taches.filter(nvoObj  => nvoObj.priorite === 1));
-console.log(taches.reduce((accumulator, currentValue) => accumulator + currentValue.duree,0));
+console.log(taches.reduce((total, currentValue) => {
+	if(currentValue.priorite === 1){
+		total.push(currentValue);
+	}
+	return total
+},[]));
