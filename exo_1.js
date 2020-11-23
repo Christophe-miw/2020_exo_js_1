@@ -17,13 +17,10 @@ let taches = [
 ];
 
 console.log('1.');
-for(let [index, tache] of Object.entries(taches)) {
-	console.log(tache.nom);
-}
+console.log(taches.map(tache => tache.nom));
 
 console.log('\n2.');
-let resQ2 = taches.filter(tache => tache.priorite === 1);
-console.log(resQ2);
+console.log(taches.filter(tache => tache.priorite === 1));
 
 console.log('\n3.');
 let sommeDurees = (somme, tache) => somme + tache.duree;
