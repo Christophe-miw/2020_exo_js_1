@@ -17,28 +17,11 @@ let taches = [
 ];
 
 
-let arrayNom = [];
-taches.forEach(tache => {
-	arrayNom.push(tache.nom);
-	
-});
-
+let arrayNom = taches.map(o => o.nom);
 console.log(arrayNom);
 
-let arrayPrio = [];
-taches.forEach(tache => {
-	if(tache.priorite == 1)
-	{
-		arrayPrio.push(tache)
-	}
-});
+
+let arrayPrio = taches.filter(o => o.priorite === 1)
 
 console.log(arrayPrio);
 
-let dureeTotale = 0;
-
-taches.forEach(tache => {
-	dureeTotale += tache.duree*1;
-	
-});
-console.log(dureeTotale);
