@@ -24,20 +24,12 @@
         },
     ];
 
-    let arrNom = [];
-    let arrPrio = [];
-    let durTot = 0;
-    for (let key in taches) {
-        arrNom.push(taches[key].nom);
-        durTot += taches[key].duree;
-        if (taches[key].priorite == 1){
-            arrPrio.push(taches[key].priorite)
-        }
-    }
-
-    console.log('Array nom : ' + arrNom);
-    console.log('Array priorité : ' + arrPrio);
-    console.log('Duree totale : ' +durTot);
+    let mapNom = taches.map(tache => tache.nom);
+    console.log('Nom : ' + mapNom);
+    let filterPrio = taches.filter(tache => tache.priorite== 1);
+    console.log('Prio : ' + filterPrio);
+    let reduceDur = taches.reduce((somme ,tache) => somme + tache.duree, 0);
+    console.log('Duree : ' + reduceDur)
 </script>
 </body>
 </html>
