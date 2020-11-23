@@ -19,10 +19,17 @@ let taches = [{
 let Noms = taches.map(x => x.nom)
 
 let priorite = taches.filter(x => x.priorite == 1)
-let resultat = 0
-const reducer = (taches) => taches.duree
-resultat = taches.reduce((x, y) => x + y.duree, 0)
-    /* taches.forEach((element) => Noms.push(element.nom))
+
+const reducer = (taches, ) => taches.duree
+    /* resultat = taches.reduce((x, y) => x + y.duree, 0) */
+
+let resultat = []
+taches.reduce((x, tache) => {
+    if (tache.priorite === 1) resultat.push(tache)
+}, resultat)
+
+
+/* taches.forEach((element) => Noms.push(element.nom))
     taches.forEach((element) => {
         if (element.priorite == 1)
             priorite.push(element.priorite)
