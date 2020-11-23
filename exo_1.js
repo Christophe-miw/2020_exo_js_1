@@ -18,11 +18,11 @@ let taches = [
 ];
 
 // array nom
-const map1 = taches.map(itemTableauTache => itemTableauTache);
+const map1 = taches.map(itemTableauTache => itemTableauTache.nom);
 console.log(map1);
 
 // array priorites = 1
-const result = taches.filter(priorite => priorite.priorite == 1);
+const result = taches.filter(priorite => priorite.priorite === 1);
 console.log(result);
 
 // durée total
