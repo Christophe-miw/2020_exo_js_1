@@ -22,7 +22,7 @@ for(i=0; i < taches.length ; i++){
 	tabNoms.push(taches[i].nom)
 
 }
-console.log(tabNoms)
+//console.log(tabNoms)
 //2. array des priorites = 1
 tabPrio = [];
 for(i=0; i < taches.length ; i++){
@@ -36,6 +36,11 @@ dureeTotal = 0;
 for(i=0; i < taches.length ; i++){
 	dureeTotal+=taches[i].duree;
 }
-console.log(dureeTotal);
+//console.log(dureeTotal);
+
+//Version2: avec array map, array filter, array reduce
+
+//1. array des noms
+console.log(taches.map(x => x.nom));
 </script>
 
