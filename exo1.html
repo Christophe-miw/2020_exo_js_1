@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Meozzi Théo - Exo 1 JS </title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+	<body>
+
+        <h1> Résultats dans la console </h1>
+
+		<script>
+            
+            let taches = [
+                {
+                    nom: 'Travailler efficacement',
+                    duree: 180,
+                    priorite: 3
+                },
+                {
+                    nom: 'Boire un café',
+                    duree: 20,
+                    priorite: 1
+                },
+                {
+                    nom: 'Discuter avec ses collèges',
+                    duree: 120,
+                    priorite: 1
+                }
+            ];
+
+            console.log(taches.map(parametre => parametre.nom));
+
+            console.log(taches.filter(parametre => parametre.priorite === 1));
+
+            console.log(taches.reduce((calcul, valeur) => {return calcul+valeur.duree}, 0));
+
+        </script>
+        
+	</body>
+</html>
