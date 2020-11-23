@@ -15,3 +15,18 @@ let taches = [
 		priorite: 1,
 	},
 ];
+
+let dureeTotal = 0;
+
+for (let i = 0; i < taches.length; i++) {
+	console.log("Noms: " + taches[i].nom);
+}
+
+for (let i = 0; i < taches.length; i++) {
+	if (taches[i].priorite == 1){
+		console.log("Priorité: " + taches[i].priorite);
+	}
+	dureeTotal += taches[i].duree;
+}
+
+console.log("Durée total " + dureeTotal);
