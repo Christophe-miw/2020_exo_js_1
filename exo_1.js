@@ -15,3 +15,12 @@ let taches = [
 		priorite: 1,
 	},
 ];
+
+// Exercice 1
+console.log(taches.map(obj => obj.nom));
+
+// EXercice 2
+console.log(taches.filter(obj => obj.priorite == 1));
+
+// Exercice 3
+console.log(taches.reduce((somme, tache) => somme + tache.duree, 0));
