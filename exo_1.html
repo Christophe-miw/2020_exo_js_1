@@ -1,0 +1,41 @@
+<script>
+let taches = [
+	{
+		nom: 'Travailler efficacement',
+		duree: 180,
+		priorite: 3,
+	},
+	{
+		nom: 'Boire un café',
+		duree: 20,
+		priorite: 1,
+	},
+	{
+		nom: 'Discuter avec ses collèges',
+		duree: 120,
+		priorite: 1,
+	},
+];
+//1. array des noms
+tabNoms = [];
+for(i=0; i < taches.length ; i++){
+	tabNoms.push(taches[i].nom)
+
+}
+console.log(tabNoms)
+//2. array des priorites = 1
+tabPrio = [];
+for(i=0; i < taches.length ; i++){
+	if(taches[i].priorite == 1){
+		tabPrio.push(taches[i])
+	}
+}
+console.log(tabPrio);
+//3. durée total
+dureeTotal = 0;
+for(i=0; i < taches.length ; i++){
+	dureeTotal+=taches[i].duree;
+}
+console.log(dureeTotal);
+</script>
+
