@@ -20,10 +20,6 @@ var noms = [];
 for (var i = 0; i < taches.length; i++) {
    noms.push(taches[i].nom);
 }
-var noms = [];
-for (var i = 0; i < taches.length; i++) {
-   noms.push(taches[i].nom);
-}
 var priorites = [];
 for (var i = 0; i < taches.length; i++) {
    if (taches[i].priorite == 1) {
