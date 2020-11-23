@@ -22,3 +22,10 @@ const reducer = (accumulator, currentValue) => accumulator + currentValue.duree;
 console.log(taches.map(tache => tache.nom));
 console.log(taches.filter(taches => taches.priorite === 1));
 console.log(taches.reduce(reducer, 0));
+
+console.log(taches.reduce((prio, tache) => {
+	if(tache.priorite === 1){
+		prio.push(tache);
+	}
+	return prio;
+},[]));
