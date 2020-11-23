@@ -15,3 +15,16 @@ let taches = [
 		priorite: 1,
 	},
 ];
+
+// console.log(taches.map(tache => tache.nom))
+
+// console.log(taches.filter(tache => tache.priorite === 1))
+
+total = []
+taches.reduce((x, tache) => {
+	if (tache.priorite === 1) total.push(tache)
+}, total)
+
+console.log(total)
+
+// console.log(taches.reduce((total, {duree}) => total + duree, 0))
