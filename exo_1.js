@@ -15,3 +15,7 @@ let taches = [
 		priorite: 1,
 	},
 ];
+
+console.log(taches.map(nvoObj => nvoObj .nom));
+console.log(taches.filter(nvoObj  => nvoObj.priorite === 1));
+console.log(taches.reduce((accumulator, currentValue) => accumulator + currentValue.duree,0));
