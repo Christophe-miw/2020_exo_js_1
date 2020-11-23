@@ -30,6 +30,15 @@
     console.log('Prio : ' + filterPrio);
     let reduceDur = taches.reduce((somme ,tache) => somme + tache.duree, 0);
     console.log('Duree : ' + reduceDur)
+
+
+    let reduceFilter = []
+    taches.reduce((x, tache)=>{
+        if (tache.priorite === 1 ){
+            reduceFilter.push(tache);
+        }
+    }, reduceFilter)
+    console.log('Filter reduce : ' + reduceFilter);
 </script>
 </body>
 </html>
