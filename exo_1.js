@@ -22,5 +22,12 @@ console.log(taches.map(obj => obj.nom));
 // EXercice 2
 console.log(taches.filter(obj => obj.priorite == 1));
 
+console.log(taches.reduce(function(r, obj){
+	if (obj.priorite === 1) {
+		r.push(obj);
+	}
+	return r;
+}, []));
+
 // Exercice 3
 console.log(taches.reduce((somme, tache) => somme + tache.duree, 0));
