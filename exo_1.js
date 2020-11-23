@@ -18,13 +18,22 @@ let taches = [
 ];
 
 // array nom
-const map1 = taches.map(itemTableauTache => itemTableauTache.nom);
-console.log(map1);
+//const map1 = taches.map(itemTableauTache => itemTableauTache.nom);
+//console.log(map1);
 
 // array priorites = 1
-const result = taches.filter(priorite => priorite.priorite === 1);
-console.log(result);
+//const result = taches.filter(priorite => priorite.priorite === 1);
+//console.log(result);
 
 // durée total
-let sommeDuree = taches.reduce((accumulateur, valeurCourante) => accumulateur + valeurCourante.duree,0);
+//let sommeDuree = taches.reduce((accumulateur, valeurCourante) => accumulateur + valeurCourante.duree,0);
+//console.log(sommeDuree);
+
+// array priorites = 1 V2
+
+let init = [];
+let sommeDuree = taches.reduce((total, cellule) => {
+	return total = taches.filter(cellule => cellule.priorite === 1);
+}, []);
+
 console.log(sommeDuree);
